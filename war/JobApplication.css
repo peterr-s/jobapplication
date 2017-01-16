@@ -1,0 +1,164 @@
+/** Add css rules here for your application. */
+body {
+	background-color: #ffffff;
+	font-family: Roboto, RobotoDraft, Helvetica, Arial, sans-serif;
+	margin: 0;
+}
+
+header {
+	background-color: rgb(66, 133, 244);
+	color: rgba(255, 255, 255, 1);
+	height: 278px;
+	display: block;
+}
+
+main {
+	margin: auto;
+	width: 50%;
+	display: block;
+	margin-top: -100px;
+	background-color: #fff;
+	margin-bottom: 48px;
+	box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.37);
+	word-wrap: break-word;
+	display: block;
+}
+
+main #toprule {
+	background-color: rgb(130, 177, 255);
+	color: rgba(0, 0, 0, 1);
+	display: block;
+}
+
+main #main_header {
+	color: rgba(0, 0, 0, .87);
+	padding: 34px 17px;
+	display: block;
+}
+
+.form_title {
+	box-sizing: border-box;
+	font-size: 34px;
+	line-height: 135%;
+	display: block;
+}
+
+.form_title_desc {
+	white-space: pre-wrap;
+	line-height: 135%;
+	margin-top: 22px;
+	font-size: 13px;
+	display: block
+}
+
+.form_title_legend {
+	color: #db4437;
+	margin-top: 22px;
+	font-size: 13px;
+	display: block;
+}
+
+section {
+	background-color: transparent;
+	margin-top: 2px;
+	padding: 16px 17px;
+	page-break-inside: avoid;
+	-webkit-transition: background-color 200ms
+		cubic-bezier(0.0, 0.0, 0.2, 1);
+	transition: background-color 200ms cubic-bezier(0.0, 0.0, 0.2, 1);
+	display: block;
+}
+
+section .section_head {
+	font-size: 25px;
+	line-height: 135%;
+	width: 100%;
+	display: block;
+	margin-top: 20px;
+}
+
+.required {
+	color: #db4437;
+}
+
+.gwt-TextBox{
+	height: 30px;
+	font-size: 20px;
+	width: 50%;
+	outline: none;
+	display: block;
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px solid silver;
+    margin-top: 15px;
+}
+
+.gwt-RadioButton{
+	height: 30px;
+	font-size: 20px;
+	width: 50%;
+	outline: none;
+	display: block;
+    background-color: transparent;
+    border: 0;
+    margin-top: 15px;
+}
+
+.gwt-CheckBox{
+	height: 30px;
+	font-size: 20px;
+	width: 50%;
+	outline: none;
+	display: block;
+    background-color: transparent;
+    border: 0;
+    margin-top: 15px;
+}
+
+.gwt-ListBox{
+	height: 30px;
+	font-size: 20px;
+	width: 50%;
+	outline: none;
+	display: block;
+    background-color: transparent;
+    border: 1px solid silver;
+    margin-top: 15px;
+}
+
+.gwt-TextArea{
+	font-size: 20px;
+	width: 50%;
+	outline: none;
+	display: block;
+    background-color: transparent;
+    border: 1px solid silver;
+    margin-top: 15px;
+}
+
+.gwt-Button {
+	background-color: #4285f4;
+    line-height: 30px;
+    width: 80px;
+    color: #fff;
+    border: 0;
+    border-radius: 3px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    min-width: 4em;
+    outline: none;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.gwt-Label{
+	line-height: 2em;
+	margin-top: 5px;
+	color: #db4437;
+	font-size: 15px;
+	background-color: #ffebee;
+	display: block;
+	width: 50%;
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+	
+	</ui:style>
+	<g:HTMLPanel>
+		<header>&nbsp;</header>
+
+		<main>
+			<div id="toprule">&nbsp;</div>
+			<div id="main_header">
+				<div class="form_title">Job Application</div>
+				<div class="form_title_desc">Please enter your information below to apply for a
+					job with us.</div>
+				<div class="form_title_legend">* Required</div>
+			</div>
+
+			<section>
+				<div class="section_head">
+					Name
+					<span class="required">*</span>
+				</div>
+				<g:TextBox ui:field="name" />
+				<g:Label visible="false" ui:field="nameFeedback">Please enter your full name (at least 5 characters).</g:Label>
+			</section>
+
+			<section>
+				<div class="section_head">
+					Gender
+					<span class="required">*</span>
+				</div>
+
+				<g:RadioButton ui:field="genderMale" name="gender" 
+					checked="true"> Male </g:RadioButton>
+				<g:RadioButton ui:field="genderFemale" name="gender" > Female </g:RadioButton>
+				<g:RadioButton ui:field="genderOther" name="gender" > Other </g:RadioButton>
+				<g:Label visible="false" ui:field="genderFeedback">Please select your gender.</g:Label>
+			</section>
+
+			<section>
+				<div class="section_head">
+					Email
+					<span class="required">*</span>
+				</div>
+				<g:TextBox ui:field="email" />
+				<g:Label visible="false" ui:field="emailFeedback">Please enter a valid Email.</g:Label>
+			</section>
+
+			<section>
+				<div class="section_head">
+					Phone Number
+					<span class="required">*</span>
+				</div>
+				<g:TextBox ui:field="phoneNumber" />
+				<g:Label visible="false" ui:field="phoneNumberFeedback">Please enter a telephone number. Only numbers are allowed.</g:Label>
+			</section>
+
+			<section>
+				<div class="section_head">
+					Which position(s) are you interested in?
+					<span class="required">*</span>
+				</div>
+				<g:CheckBox ui:field="positionDeveloper" >Java Developer</g:CheckBox>
+				<g:CheckBox ui:field="positionDesigner" >UI Designer</g:CheckBox>
+				<g:CheckBox ui:field="positionMarketing" >Marketing</g:CheckBox>
+				<g:CheckBox ui:field="positionAnalyst">Business Analyst</g:CheckBox>
+				<g:Label visible="false" ui:field="positionFeedback">Please select at least one position you are interested in.</g:Label>
+			</section>
+
+			<section>
+				<div class="section_head">
+					Highest degree?
+				</div>
+				<g:ListBox ui:field="degree">
+					<g:item value="phd">PhD</g:item>
+					<g:item value="master">Master's</g:item>
+					<g:item value="bachelor">Bachelor's</g:item>
+					<g:item value="noDegree">No Degrees</g:item>
+				</g:ListBox>
+			</section>
+
+			<section>
+				<div class="section_head">
+					Submit your cover letter or resume
+				</div>
+				<g:TextArea ui:field="cv" visibleLines="5" />
+			</section>
+
+			<section>
+				<g:Button ui:field="submit">Submit</g:Button>
+			</section>
+		</main>
+
+
+	</g:HTMLPanel>
+</ui:UiBinder> 
