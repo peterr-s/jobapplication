@@ -19,6 +19,25 @@ public class ApplicantInfo implements Serializable {
 	private String degree = "";
 	private String cv = "";
 
+	//0-arg constructor
+	public ApplicantInfo() {
+		
+	}
+	
+	//constructor
+	public ApplicantInfo(String name, String gender, String email, String phone, Set<String> positions, String degree,
+			String cv) {
+		super();
+		this.name = name;
+		this.gender = gender;
+		this.email = email;
+		this.phone = phone;
+		this.positions = positions;
+		this.degree = degree;
+		this.cv = cv;
+	}
+
+	//getters and setters
 	public String getName() {
 		return name;
 	}
