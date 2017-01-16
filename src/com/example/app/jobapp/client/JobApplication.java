@@ -1,6 +1,5 @@
 package com.example.app.jobapp.client;
 
-import com.example.app.jobapp.shared.FieldVerifier;
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.event.dom.client.ClickEvent;
