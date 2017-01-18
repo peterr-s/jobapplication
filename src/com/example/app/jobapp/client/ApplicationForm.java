@@ -52,12 +52,10 @@ public class ApplicationForm extends Composite {
 	@UiField CheckBox positionMarketing;
 	@UiField CheckBox positionAnalyst;
 	@UiField Label positionFeedback;
-	@UiField Label degreeFeedback;
 
 	@UiField ListBox degree;
 	@UiField TextArea cv;
 	@UiField Button submit;
-	@UiField Button hackedSubmit;
 
 	ApplicantInfo applicantInfo = new ApplicantInfo();
 
@@ -180,74 +178,11 @@ public class ApplicationForm extends Composite {
 
 		//actual submission code goes here
 		//create a remote service proxy 
-		RecordInfoServiceAsync recordInfoService = GWT.create(RecordInfoService.class);
 
 		//call the remote method to record applicant info
-		recordInfoService.recordInfo(applicantInfo, new AsyncCallback<Void>() {
-
-			@Override
-			public void onSuccess(Void result) {
-				//applicant information recorded successfully, show the success page.
-				RootPanel.get().clear();
-				RootPanel.get().add(new RecordInfoSuccess());
-			}
-
-			@Override
-			public void onFailure(Throwable caught) {
-				//errors occur, check error types and show feedback accordingly
-				RootPanel.get().clear();
-				if (caught instanceof ApplicantInfoException) {
-					ApplicantInfoException e = (ApplicantInfoException) caught;
-					RootPanel.get().add(new RecordInfoFailed(e.getMessage()));
-				} else {
-					RootPanel.get().add(
-							new RecordInfoFailed("Unexpected errors occured! Please contact administrator."));
-				}
-
-			}
-		});
+		
 
 	}
 
-	@UiHandler("hackedSubmit")
-	void onHackedSubmitClick(ClickEvent e)	{
-		//create an ApplicantInfo object with invalid info
-		Set<String> interestedPosition = new HashSet<>();
-		interestedPosition.add("Boss");
-
-		ApplicantInfo info = new ApplicantInfo(
-				"abcd", //name too short
-				"not valid gender", 
-				"myemail AT gmail DOT com",  //invalid email address
-				"1234abcd", //phone number contains non-number characters
-				interestedPosition, //not one of the positions listed
-				"High school diploma", // not one of the options
-				"My CV");
-
-		//create a remote service proxy 
-		RecordInfoServiceAsync recordInfoService = GWT.create(RecordInfoService.class);
-		recordInfoService.recordInfo(info, new AsyncCallback<Void>() {
-
-			@Override
-			public void onFailure(Throwable caught) {
-				//errors occur, check error types and show feedback accordingly
-				RootPanel.get().clear();
-				if (caught instanceof ApplicantInfoException) {
-					ApplicantInfoException e = (ApplicantInfoException) caught;
-					RootPanel.get().add(new RecordInfoFailed(e.getMessage()));
-				} else {
-					RootPanel.get().add(
-							new RecordInfoFailed("Unexpected errors occured! Please contact administrator."));
-				}
-			}
-
-			@Override
-			public void onSuccess(Void result) {
-				RootPanel.get().clear();
-				RootPanel.get().add(new RecordInfoSuccess());
-			}
-		});
-
-	}
 
 }
