@@ -1,0 +1,22 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+	
+	</ui:style>
+	<g:HTMLPanel>
+		<header>&nbsp;</header>
+
+		<main>
+			<div id="toprule">&nbsp;</div>
+			<div id="main_header">
+				<div class="form_title">Applicant information recorded successfully!
+				</div>
+				<div class="form_title">
+					Thank you for your application!
+				</div>
+			</div>
+		</main>
+
+	</g:HTMLPanel>
+</ui:UiBinder> 
